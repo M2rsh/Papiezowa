@@ -1,12 +1,7 @@
 const countdown = document.getElementById('countdown');
-countdown.innerText = "Loading... Please wait."
+countdown.innerText = "Ładowanie..."
 
-var completeDate = new Date();
-if (completeDate.getHours() > 21 && completeDate.getMinutes > 37) {
-		completeDate.setDate(completeDate.getDate()+1)
-}
-//completeDate.setHours(23, 59, 59);
-//completeDate.setMonth(12, 31)
+let completeDate = new Date();
 completeDate.setHours(21, 37, 00)
 
 
@@ -15,19 +10,12 @@ for (let i = 0; i < 100; i++) {
 	colours.push("hsl(" + (360 * i / 100) + ",80%,50%)");
 }
 
-/*let i = 10;
-countdown.innerText = i;
 var _int1 = setInterval(function() {
-	i -= 1;
-	if (i==0) {
-		afterCountdown(i);
-		clearInterval(_int1);
-	} else {
-		countdown.innerText = i;
+	const currentDate = new Date()
+	var remaining = completeDate - currentDate;
+	if(remaining < 0) {
+		remaining = completeDate - currentDate.setDate(currentDate.getDate()-1);
 	}
-}, 1000)*/
-var _int1 = setInterval(function() {
-	const remaining = completeDate - new Date();
 	const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
   const hours = Math.floor(remaining / (1000 * 60 * 60)) % 24;
   const minutes = Math.floor(remaining / (1000 * 60)) % 60;

@@ -2,6 +2,9 @@ const countdown = document.getElementById('countdown');
 countdown.innerText = "Loading... Please wait."
 
 var completeDate = new Date();
+if (completeDate.getHours() > 21 && completeDate.getMinutes > 37) {
+		completeDate.setDate(completeDate.getDate()+1)
+}
 //completeDate.setHours(23, 59, 59);
 //completeDate.setMonth(12, 31)
 completeDate.setHours(21, 37, 00)

@@ -25,7 +25,7 @@ var _int1 = setInterval(function() {
 		afterCountdown();
 		clearInterval(_int1);
 	} else {
-		countdown.innerText = `Zostało ${days!=0 ? days+' days, ' : ""}${hours} Godzin ${minutes} Minut ${seconds} Sekund.`;
+		countdown.innerText = `Zostało ${days!=0 ? days+' days, ' : ""}${hours} ${hours <= 1 ? "Godziny" : "Godzina"} ${minutes} Minut ${seconds} Sekund.`;
 	}
 }, 1000)
 

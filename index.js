@@ -30,7 +30,7 @@ var _int1 = setInterval(function() {
 }, 1000)
 
 function afterCountdown() {
-		countdown.innerText="PAPIEŻOWA!";
+		countdown.innerText="PAPIErzOWA!";
 		setInterval(() => (confetti()), 1000);
 		i = 0;
 		setInterval(function() {
